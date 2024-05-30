@@ -2,11 +2,16 @@ Imports System
 
 Module Program
     Sub Main(args As String())
+
+        Console.Write("Zadej celé èíslo: ")
+        Faktorial()
+    End Sub
+    Sub Faktorial()
         Dim cislo As Integer
 
         Do
             Dim faktorial As Integer = 1
-            Console.Write("Zadej celé èíslo: ")
+
             If Integer.TryParse(Console.ReadLine, cislo) Then
                 If cislo < 13 Then
                     If cislo > -1 Then
@@ -25,4 +30,5 @@ Module Program
             End If
         Loop
     End Sub
+
 End Module
