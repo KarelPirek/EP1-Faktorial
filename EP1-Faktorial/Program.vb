@@ -10,6 +10,7 @@ Module Program
                 If vstup < 13 Then
                     If vstup > -1 Then
                         Vysledek = FaktorialVypocet(vstup)
+                        Console.WriteLine($"Faktoriá1 zadaného èísla je {Vysledek}")
                     Else
                         Console.WriteLine("Faktoriál záporného èísla nelze vypoèítat.")
                     End If
@@ -17,10 +18,11 @@ Module Program
                     Console.WriteLine("Faktoriál èísel 13 a více je vìtší, než nejvìtší èíslo, které spadá do celých èísel.")
                 End If
 
-                Console.WriteLine($"Faktoriá1 zadaného èísla je {Vysledek}")
-                    Else
-                        Console.WriteLine("Zadejte celé èíslo.")
+
+            Else
+                Console.WriteLine("Zadejte celé èíslo.")
             End If
+
         Loop
     End Sub
     Function FaktorialVypocet(cislo As Integer)
