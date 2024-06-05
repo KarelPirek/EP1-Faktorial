@@ -4,10 +4,12 @@ Module Program
     Sub Main(args As String())
 
         Console.Write("Zadej celé èíslo: ")
-        Faktorial()
+        Dim Vysledek As Integer
+        Vysledek = FaktorialVypocet()
+        Console.WriteLine($"Faktoriá1 zadaného èísla je {Vysledek}")
     End Sub
-    Sub Faktorial()
-        Dim cislo As Integer
+    Function FaktorialVypocet(cislo As Integer)
+
 
         Do
             Dim faktorial As Integer = 1
@@ -18,7 +20,7 @@ Module Program
                         For i = 1 To cislo
                             faktorial = faktorial * i
                         Next i
-                        Console.WriteLine($"Faktoriá1 èísla {cislo} je {faktorial}")
+
                     Else
                         Console.WriteLine("Faktoriál záporného èísla nelze vypoèítat.")
                     End If
@@ -29,6 +31,7 @@ Module Program
                 Console.WriteLine("Zadejte celé èíslo.")
             End If
         Loop
-    End Sub
+        Return 0
+    End Function
 
 End Module
